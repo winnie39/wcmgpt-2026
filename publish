@@ -20,9 +20,9 @@ git commit -m "$commitMessage"
 
 git push
 
-STOCKBUll_PASSWORD='%en$3SgV'
+STOCKBUll_PASSWORD='Ew9Eu65gFilbE'
 
-ip_address="74.50.86.86"
+ip_address="163.245.212.71"
 
 if [ -n "$ip_address" ]; then
   echo -e "IP address of ${BLUE}$domain${RESET} is ${YELLOW}$ip_address${RESET}"
@@ -39,8 +39,8 @@ if [ -n "$ip_address" ]; then
   php artisan optimize
   php artisan view:cache
   php artisan config:clear
-  sudo chmod -R 775 /var/www/laravel/storage
-  sudo chown -R www-data:www-data /var/www/laravel/storage
+  sudo chmod -R 775 /var/www/wcmgpt-2026/storage
+  sudo chown -R www-data:www-data /var/www/wcmgpt-2026/storage
   exit
   '
 
