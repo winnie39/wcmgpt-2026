@@ -29,7 +29,7 @@ if [ -n "$ip_address" ]; then
 
   sshpass -p "$STOCKBUll_PASSWORD" ssh "root@$ip_address" '
   source /root/.nvm/nvm.sh
-  cd /var/www/laravel
+  cd /var/www/wcmgpt-2026
   git stash
   git pull
   # php artisan migrate
