@@ -1,0 +1,51 @@
+# Publish git changes
+
+RED='\033[31m'
+GREEN='\033[32m'
+YELLOW='\033[33m'
+BLUE='\033[34m'
+RESET='\033[0m'
+domain="stockbull.live"
+
+if [ "$#" -ne 1 ]; then
+    echo -e "${RED}Usage: $0 <COMMIT MESSAGE>${RESET}"
+    exit 1
+fi
+
+commitMessage=$1
+
+git add .
+
+git commit -m "$commitMessage"
+
+git push
+
+STOCKBUll_PASSWORD='%en$3SgV'
+
+ip_address="74.50.86.86"
+
+if [ -n "$ip_address" ]; then
+  echo -e "IP address of ${BLUE}$domain${RESET} is ${YELLOW}$ip_address${RESET}"
+
+  sshpass -p "$STOCKBUll_PASSWORD" ssh "root@$ip_address" '
+  source /root/.nvm/nvm.sh
+  cd /var/www/laravel
+  git stash
+  git pull
+  # php artisan migrate
+  # composer install
+  # npm install
+#   npm run build
+  php artisan optimize
+  php artisan view:cache
+  php artisan config:clear
+  sudo chmod -R 775 /var/www/laravel/storage
+  sudo chown -R www-data:www-data /var/www/laravel/storage
+  exit
+  '
+
+  echo -e "${GREEN}You have successfully published your changes.${RESET}"
+
+else
+  echo "${RED}Failed to retrieve the IP address for $domain${RESET}"
+fi
