@@ -8,7 +8,8 @@
 
 <script src="/js/Chart.bundle.min.js"></script>
 <script src="/js/utils.js"></script>
-{{-- <script src="/js/chart-js-data.js"></script> --}}
+{{--
+<script src="/js/chart-js-data.js"></script> --}}
 
 <script src="/js/main.js"></script>
 <script src="/js/color-scheme-demo.js"></script>
@@ -28,7 +29,7 @@
 {!! Toastr::message() !!}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         window.Echo.channel('toast-notification')
             .listen('.notification', (event) => {
                 toastr.info(event.message);
@@ -36,7 +37,7 @@
     });
 </script>
 
-{{-- 
+{{--
 <script>
     "use strict";
 
@@ -50,7 +51,7 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
 
         $.ajaxSetup({
             headers: {
@@ -60,8 +61,9 @@
     })
 </script>
 
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
+{{--
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
 
         const notifyMsg = (msg, cls) => {
             Swal.fire({
@@ -74,7 +76,7 @@
             })
         }
 
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             $('#preLoadCustom').delay(100).fadeOut(100);
         });
         const darkModeChange = () => {
@@ -89,22 +91,22 @@
             }
         }
 
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             darkModeChange()
         });
 
-        $(document).on('click', '#darklayout', function() {
+        $(document).on('click', '#darklayout', function () {
             darkModeChange()
         });
 
-        (function($) {
+        (function ($) {
             "use strict";
-            $(".langSel").on("change", function() {
+            $(".langSel").on("change", function () {
                 window.location.href = "https://zeustrade.pro/d6/change/" + $(this).val();
             });
 
             var inputElements = $('input,select');
-            $.each(inputElements, function(index, element) {
+            $.each(inputElements, function (index, element) {
                 element = $(element);
                 var type = element.attr('type');
                 if (type != 'checkbox') {
@@ -113,17 +115,17 @@
                 }
             });
 
-            $('.policy').on('click', function() {
-                $.get('https://zeustrade.pro/d6/cookie/accept', function(response) {
+            $('.policy').on('click', function () {
+                $.get('https://zeustrade.pro/d6/cookie/accept', function (response) {
                     $('.cookies-card').addClass('d-none');
                 });
             });
 
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.cookies-card').removeClass('hide')
             }, 2000);
 
-            $.each($('input, select, textarea'), function(i, element) {
+            $.each($('input, select, textarea'), function (i, element) {
 
                 if (element.hasAttribute('required')) {
                     $(element).closest('.form-group').find('label').addClass('required');
@@ -131,7 +133,7 @@
 
             });
 
-            $('.showFilterBtn').on('click', function() {
+            $('.showFilterBtn').on('click', function () {
                 $('.responsive-filter-card').slideToggle();
             });
 
@@ -139,10 +141,10 @@
             let rows = $('.table tbody tr');
             let columns
             let dataLabel;
-            $.each(rows, function(index, element) {
+            $.each(rows, function (index, element) {
                 columns = element.children;
                 if (columns.length == headings.length) {
-                    $.each(columns, function(i, td) {
+                    $.each(columns, function (i, td) {
                         dataLabel = headings[i].innerText;
                         $(td).attr('data-label', dataLabel)
                     });
@@ -154,8 +156,9 @@
 </script> --}}
 <script src="/js/swiper-bundle.min.js"></script>
 
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
+{{--
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
 
         var swiper = new Swiper(".mySwiper", {
             //   effect: "coverflow",
@@ -175,18 +178,3 @@
         });
     })
 </script> --}}
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-    (function() {
-        var s1 = document.createElement("script"),
-            s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/65b21d0b0ff6374032c4b9d2/1hkvs2tsg';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
