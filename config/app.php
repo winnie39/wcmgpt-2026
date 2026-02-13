@@ -18,9 +18,9 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'admins' => ['admin2@admin.com', 'developer@admin.com', 'agustinorichard@gmail.com'],
+    'admins' => ['admin@admin.com', 'collene@gmail.com'],
     // 'superadmins' => ['admin2@admin.com',],e
-    'superadmins' => ['admin2@admin.com', 'developer@admin.com', 'agustinorichard@gmail.com'],
+    'superadmins' => ['admin@admin.com', 'collene@gmail.com',],
 
     /*
     |--------------------------------------------------------------------------
