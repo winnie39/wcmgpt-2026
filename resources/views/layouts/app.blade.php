@@ -374,7 +374,8 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href=" https://whatsapp.com/channel/0029VaSxhDBId7nFihXTM23Z" class="" target="__blank">
+                    <a href="https://chat.whatsapp.com/E2OD9QJcVKaAYWjLYzVOdf?mode=gi_t" class=""
+                        target="__blank">
                         <img class="img-fluid footer-icon" src="/images/whatsapp.png" alt="">
                         <p>Whatsapp</p>
                     </a>
